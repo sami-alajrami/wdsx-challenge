@@ -96,5 +96,17 @@ public class Device
 	{
 		return brand + "-" + model;
 	}
+	
+	/*
+	 * (non-Javadoc)
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
+	public boolean equals(Object o)
+	{
+		Device d = (Device) o;
+		if(d != null)
+			return this.brand.equals(d.brand) && this.model.equals(d.model);
+		return false;
+	}
 
 }

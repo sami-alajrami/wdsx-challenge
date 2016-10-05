@@ -55,5 +55,16 @@ public class DevicesAppTest
     	assert(result != null && result.split(" ").length == 1);
     }
     
+    /**
+     * Test for Story 3 -- validate devices
+     */
+    public void testValidateDevices()
+    {
+        //fail("not supported yet.");
+    	List<Device> result = app.loadValidDevicesFromFile(filename);
+    	assert(result != null && result.size() == 3);
+    }
+    
+    
     
 }
