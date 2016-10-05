@@ -80,6 +80,7 @@ Acceptance Criteria:
 ---
 
 Question: What would you do to improve things if you had more time?
+Answer: Think of ways to improve and simplify the validation for story 3.
 
 If you have any questions then you can email dev@wds.co for help.
 
