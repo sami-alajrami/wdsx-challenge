@@ -12,6 +12,9 @@ import junit.framework.TestSuite;
 public class DevicesAppTest 
     extends TestCase
 {
+	String filename;
+	DevicesApp app;
+	
     /**
      * Create the test case
      *
@@ -20,6 +23,8 @@ public class DevicesAppTest
     public DevicesAppTest( String testName )
     {
         super( testName );
+        filename = "devices.json";
+    	app = new DevicesApp();
     }
 
     /**
@@ -36,9 +41,19 @@ public class DevicesAppTest
     public void testAllDevicesReturned()
     {
         //fail("not supported yet.");
-    	String filename = "devices.json";
-    	DevicesApp app = new DevicesApp();
     	List<Device> result = app.loadDevicesFromFile(filename);
     	assert(result != null && result.size() == 3);
     }
+    
+    /**
+     * Test for Story 2 -- devices matching specific full name are returned
+     */
+    public void testSelectiveDevicesReturned()
+    {
+        //fail("not supported yet.");
+    	String result = app.selectByName(filename, "Mockia", "5800");
+    	assert(result != null && result.split(" ").length == 1);
+    }
+    
+    
 }

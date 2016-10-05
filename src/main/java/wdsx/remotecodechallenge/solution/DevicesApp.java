@@ -43,5 +43,22 @@ public class DevicesApp
 		return devices;
 	}
 	
+	/**
+	 * implementation of Story 2
+	 * @param filename
+	 * @param brand
+	 * @param model
+	 * @return
+	 */
+	public String selectByName(String filename, String brand, String model)
+	{
+		String result = "";
+		List<Device> devices = loadDevicesFromFile(filename);
+		for(Device d: devices)
+			if(d.getBrand().equals(brand) && d.getModel().equals(model))
+				result += d + " ";
+		return result.trim();
+	}
+	
    
 }

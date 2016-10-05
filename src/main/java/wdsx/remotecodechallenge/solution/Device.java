@@ -87,5 +87,14 @@ public class Device
 	public void setAttributes(ArrayList<HashMap<String,String>> attributes) {
 		this.attributes = attributes;
 	}
+	
+	/*
+	 * (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	public String toString()
+	{
+		return brand + "-" + model;
+	}
 
 }
