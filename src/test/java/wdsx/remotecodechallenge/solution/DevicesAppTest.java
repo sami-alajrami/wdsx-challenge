@@ -65,6 +65,34 @@ public class DevicesAppTest
     	assert(result != null && result.size() == 3);
     }
     
+    /**
+     * Test for Story 4 -- select devices by brand
+     */
+    public void testSelectiveReturnByBrand()
+    {
+    	//fail("not supported yet.");
+    	boolean flag = true;
+    	List<Device> result = app.selectByBrand(filename, "Mockia");
+    	for(Device d : result)
+    		if(d.getBrand().equals("Mockia"))
+    			flag = false;
+    	assert(flag);
+    }
+    
+    /**
+     * Test for Story 4 -- select devices by model
+     */
+    public void testSelectiveReturnByModel()
+    {
+    	//fail("not supported yet.");
+    	boolean flag = true;
+    	List<Device> result = app.selectByModel(filename, "X11");
+    	for(Device d : result)
+    		if(d.getModel().equals("X11"))
+    			flag = false;
+    	assert(flag);
+    }
+    
     
     
 }

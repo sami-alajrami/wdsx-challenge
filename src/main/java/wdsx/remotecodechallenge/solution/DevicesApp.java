@@ -134,6 +134,39 @@ public class DevicesApp
 		  }
 		  return false;
 	 }
+	 
+	 
+	 /**
+	  * implementation of Story 4 (part1)
+	  * @param filename
+	  * @param brand
+	  * @return
+	  */
+	 public List<Device> selectByBrand(String filename, String brand)
+	 {
+		 List<Device> validDevices = new ArrayList<Device>();
+		 List<Device> devices = loadDevicesFromFile(filename);
+		 for(Device d: devices)
+			 if(d.getBrand().equals(brand))
+				 validDevices.add(d);
+		 return validDevices;
+	 }
+	 
+	 /**
+	  * implementation of Story 4 (part2)
+	  * @param filename
+	  * @param model
+	  * @return
+	  */
+	 public List<Device> selectByModel(String filename, String model)
+	 {
+		 List<Device> validDevices = new ArrayList<Device>();
+		 List<Device> devices = loadDevicesFromFile(filename);
+		 for(Device d: devices)
+			 if(d.getModel().equals(model))
+				 validDevices.add(d);
+		 return validDevices;
+	 }
 
 	
    
